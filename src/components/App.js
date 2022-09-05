@@ -26,7 +26,9 @@ function App() {
   console.log("notes", notes)
   console.log("search", search)
 
+  const displayedNotes = notes.filter(note => note.title.toLowerCase().includes(search.toLowerCase()))
 
+  console.log("displayed Notes", displayedNotes)
 
   return (
     <div className="App">
