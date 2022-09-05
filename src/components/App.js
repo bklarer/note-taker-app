@@ -17,7 +17,6 @@ function App() {
 
 
   useEffect(() => {
-    //fetch notes
     fetch("http://localhost:3004/notes")
       .then((resp) => resp.json())
       .then((notes) => setNotes(notes))
