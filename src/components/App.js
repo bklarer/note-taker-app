@@ -9,7 +9,13 @@ import React from 'react';
 function App() {
   
   const [notes, setNotes] = useState([])
+  const [search, setSearch] = useState("")
   
+  function handleSearch(e) {
+    setSearch(e.target.value)
+  }
+
+
   useEffect(() => {
     //fetch notes
     fetch("http://localhost:3004/notes")
@@ -17,12 +23,15 @@ function App() {
       .then((notes) => setNotes(notes))
   }, [])
   
-  console.log(notes)
-  
+  console.log("notes", notes)
+  console.log("search", search)
+
+
+
   return (
     <div className="App">
       <Navbar/>
-      <Search/>
+      <Search search={search} onHandleSearch={handleSearch}/>
       <NoteContainer/>
 
     </div>

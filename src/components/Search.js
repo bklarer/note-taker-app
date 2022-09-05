@@ -1,11 +1,14 @@
 
 
-function Search () {
+function Search ({search, onHandleSearch}) {
 
 
 
     return(
-        <div>Search</div>
+        <div>
+         <input placeholder="search" value={search} onChange={onHandleSearch}>
+         </input>   
+        </div>
     )
 }
 
