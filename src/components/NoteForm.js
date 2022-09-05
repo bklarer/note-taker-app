@@ -9,3 +9,6 @@ function NoteForm() {
         <div>Note Form</div>
     )
 }
+
+
+export default NoteForm
