@@ -3,7 +3,12 @@
         {
             "id": 1, 
             "title": "1st Note", 
-            "note": "Note Content"
+            "content": "Note Content"
+        },
+        {
+            "id": 2, 
+            "title": "2nd Note", 
+            "content": "More Note Content"
         }
     ]
 }

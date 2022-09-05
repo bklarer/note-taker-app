@@ -3,12 +3,15 @@
 
 
 
-function Note() {
+function Note({title, content}) {
 
 
 
     return (
-        <div>Each Note</div>
+        <div>
+            <h3>{title}</h3>
+            <p>{content}</p>
+        </div>
     )
 }
 
