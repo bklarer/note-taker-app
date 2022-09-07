@@ -3,8 +3,7 @@ import '../App.css';
 import Search from './Search'
 import Navbar from './Navbar';
 import NoteContainer from './NoteContainer';
-import React from 'react';
-
+import Home from './Home';
 
 function App() {
   
@@ -34,6 +33,7 @@ function App() {
       <Navbar/>
       <Search search={search} onHandleSearch={handleSearch}/>
       <NoteContainer displayedNotes={displayedNotes}/>
+      <Home />
 
     </div>
   );
