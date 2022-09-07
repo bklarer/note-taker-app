@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import {Route, Switch} from 'react-router-dom'
+import {Route, Switch, useHistory} from 'react-router-dom'
 import '../App.css';
 import Search from './Search'
 import Navbar from './Navbar';
@@ -13,6 +13,8 @@ function App() {
   const [notes, setNotes] = useState([])
   const [search, setSearch] = useState("")
   
+  const history = useHistory()
+
   function handleSearch(e) {
     setSearch(e.target.value)
   }
@@ -42,7 +44,7 @@ function App() {
         <Route exact path="/notes">
           <Search search={search} onHandleSearch={handleSearch}/>
           <NoteContainer displayedNotes={displayedNotes}/>
-        <Route exact patch="/notes/:id">
+        <Route exact path="/notes/:id">
           <Note/>
         </Route>
         </Route>

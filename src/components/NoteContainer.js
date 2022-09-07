@@ -5,7 +5,7 @@ function NoteContainer ({displayedNotes}) {
 
 
     return(
-        <div>
+        <div id="note-container">
             {displayedNotes.map((note) => {
             return (
             <Note
