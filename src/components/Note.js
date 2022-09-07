@@ -1,9 +1,9 @@
+import {Link} from 'react-router-dom'
 
 
 
 
-
-function Note({title, content}) {
+function Note({title, content, id}) {
 
 
 
@@ -14,7 +14,7 @@ function Note({title, content}) {
                 <p>{content}</p>
             </div>
             <div className="button-container">
-                <button>View</button> {/*Need to figure out route when clicking View through link, just view full note*/}
+                <button><Link to={`/books/${id}`}>View</Link></button>
                 <button>Edit</button> {/*Need to figure out route when clicking edit through link and then patch*/}
                 <button>Delete</button> {/*Need to figure delete note with fetch and state*/}
             </div>

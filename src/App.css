@@ -24,3 +24,8 @@
 #note-container {
   float: left;
 }
+
+button {
+  padding: 10px;
+
+}

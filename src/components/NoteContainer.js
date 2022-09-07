@@ -10,6 +10,7 @@ function NoteContainer ({displayedNotes}) {
             return (
             <Note
             key={note.id}
+            id={note.id}
             title={note.title}
             content={note.content}
             />
