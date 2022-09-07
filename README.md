@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Intall react-router-dom@5 using npm install using `npm install react-router-dom@5`
+
 ## Available Scripts
 
 In the project directory, you can run:

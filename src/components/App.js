@@ -30,6 +30,7 @@ function App() {
 
   return (
     <div className="App">
+      
       <Navbar/>
       <Search search={search} onHandleSearch={handleSearch}/>
       <NoteContainer displayedNotes={displayedNotes}/>
