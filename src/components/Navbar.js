@@ -10,7 +10,8 @@ function Navbar() {
                 exact
                 className="NavLink"
                 activeStyle={{
-                background: "white",
+                background: "yellow",
+                color: "black"
                 }}
             >
                 Home
@@ -20,7 +21,8 @@ function Navbar() {
                 exact
                 className="NavLink"
                 activeStyle={{
-                background: "white",
+                background: "yellow",
+                color: "black"
                 }}
             >
                 Notes
@@ -30,7 +32,8 @@ function Navbar() {
                 exact
                 className="NavLink"
                 activeStyle={{
-                background: "white",
+                background: "yellow",
+                color: "black"
                 }}
             >
                 New Note
