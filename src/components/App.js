@@ -1,9 +1,12 @@
 import {useState, useEffect} from 'react'
+import {Route, Switch} from 'react-router-dom'
 import '../App.css';
 import Search from './Search'
 import Navbar from './Navbar';
 import NoteContainer from './NoteContainer';
 import Home from './Home';
+import NoteForm from './NoteForm';
+import Note from './Note';
 
 function App() {
   
@@ -32,10 +35,20 @@ function App() {
     <div className="App">
       
       <Navbar/>
-      <Search search={search} onHandleSearch={handleSearch}/>
-      <NoteContainer displayedNotes={displayedNotes}/>
-      <Home />
-
+      <Switch/>
+        <Route exact path="/new">
+          <NoteForm />
+        </Route>
+        <Route exact path="/notes">
+          <Search search={search} onHandleSearch={handleSearch}/>
+          <NoteContainer displayedNotes={displayedNotes}/>
+        <Route exact patch="/notes/:id">
+          <Note/>
+        </Route>
+        </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
     </div>
   );
 }
