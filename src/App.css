@@ -18,6 +18,7 @@
 .NavLink {
   color: yellow;
   padding: 10px;
+  text-decoration: none;
 
 }
 
@@ -28,4 +29,27 @@
 button {
   padding: 10px;
 
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin: 0 auto;
+  padding: 1.75rem;
+}
+
+.title {
+  background: yellow;
+  border:none;
+  padding: 1rem;
+  font-size: larger;
+}
+
+.note {
+  background: yellow;
+  border:none;
+  padding: 1rem;
+  font-size: large;
+  height: 250px;
 }

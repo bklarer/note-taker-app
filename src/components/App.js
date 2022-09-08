@@ -13,7 +13,7 @@ function App() {
   const [notes, setNotes] = useState([])
   const [search, setSearch] = useState("")
   
-  const history = useHistory()
+  const history = useHistory() //figure out
 
   function handleSearch(e) {
     setSearch(e.target.value)
