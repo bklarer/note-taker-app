@@ -63,3 +63,11 @@ button {
   color: #282c34;
   border-top: #282c34;
 }
+
+button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: large;
+
+}
