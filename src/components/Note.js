@@ -15,7 +15,7 @@ function Note({title, content, id}) {
             <div className="button-container">
                 
                 <button>✎</button> {/*Need to figure out route when clicking edit through link and then patch*/}
-                <button>♡</button> {/*Need to create state for making favorite*/}
+                <button>♡</button> {/*Need to create state for making favorite and also patch*/}
                 <button>X</button> {/*Need to figure delete note with fetch and state*/}
             </div>
         </div>

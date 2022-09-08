@@ -5,7 +5,7 @@ function Search ({search, onHandleSearch}) {
 
 
     return(
-        <div> {/*Add sort dropdown with select and add to displayedNotes in App component*/}
+        <div> {/*have it search both title and content?*/}
          <input placeholder="search" value={search} onChange={onHandleSearch}>
          </input>   
         </div>
