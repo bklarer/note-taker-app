@@ -52,4 +52,14 @@ button {
   padding: 1rem;
   font-size: large;
   height: 250px;
+  resize: none;
+}
+
+.submit {
+  background: rgb(255, 255, 0);
+  border:none;
+  padding: 1rem;
+  font-size: larger;
+  color: #282c34;
+  border-top: #282c34;
 }
