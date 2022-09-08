@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import {Route, Switch, useHistory} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import '../App.css';
 import Search from './Search'
 import Navbar from './Navbar';
@@ -12,8 +12,6 @@ function App() {
   
   const [notes, setNotes] = useState([])
   const [search, setSearch] = useState("")
-  
-  const history = useHistory() //figure out
 
   function handleSearch(e) {
     setSearch(e.target.value)
