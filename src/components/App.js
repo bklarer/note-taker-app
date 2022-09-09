@@ -27,7 +27,8 @@ function App() {
   console.log("notes", notes)
   console.log("search", search)
 
-  const displayedNotes = notes.filter(note => note.title.toLowerCase().includes(search.toLowerCase()))
+  const displayedNotes = notes.filter(note => 
+    note.title.toLowerCase().includes(search.toLowerCase()) || note.content.toLowerCase().includes(search.toLowerCase()))
 
   console.log("displayed Notes", displayedNotes)
 
