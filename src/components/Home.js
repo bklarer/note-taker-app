@@ -1,10 +1,8 @@
 import Note from "./Note";
 
-//Insert all favorite notes
 
 function Home ({displayedNotes}) {
 
-    //Filter for favorites
     const favoriteNotes = displayedNotes.filter(note => note.favorite === true)
 
 

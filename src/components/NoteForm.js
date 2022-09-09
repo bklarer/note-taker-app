@@ -5,8 +5,10 @@ import {useState}  from 'react'
 function NoteForm() {
     const [newNote, setNewNote] = useState({
         title: "",
-        content:""
+        content:"",
+        favorite: false
     })
+    
     //need to connect state and do a fetch post
 
     function handleChange(e) { 

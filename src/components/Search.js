@@ -5,7 +5,7 @@ function Search ({search, onHandleSearch}) {
 
 
     return(
-        <div> {/*have it search both title and content?*/}
+        <div>
          <input placeholder="search" value={search} onChange={onHandleSearch}>
          </input>   
         </div>
