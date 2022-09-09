@@ -3,12 +3,14 @@
         {
             "id": 1, 
             "title": "1st Note", 
-            "content": "Note Content"
+            "content": "Note Content",
+            "favorite": true
         },
         {
             "id": 2, 
             "title": "2nd Note", 
-            "content": "More Note Content"
+            "content": "More Note Content",
+            "favorite": false
         }
     ]
 }

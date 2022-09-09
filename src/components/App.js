@@ -25,7 +25,6 @@ function App() {
   }, [])
   
   console.log("notes", notes)
-  console.log("search", search)
 
   const displayedNotes = notes.filter(note => 
     note.title.toLowerCase().includes(search.toLowerCase()) || note.content.toLowerCase().includes(search.toLowerCase()))
@@ -48,7 +47,7 @@ function App() {
         </Route>
         </Route>
         <Route exact path="/">
-          <Home />
+          <Home displayedNotes={displayedNotes}/>
         </Route>
     </div>
   );
