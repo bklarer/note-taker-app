@@ -17,6 +17,8 @@ function NoteForm({onAddNote}) {
 
     }
 
+    console.log("New Note", newNote)
+
     function handleSubmit(e) {
         e.preventDefault()
         fetch("http://localhost:3004/notes", {
@@ -25,7 +27,7 @@ function NoteForm({onAddNote}) {
             "Content-Type": "application/json",
             Accept: "application/json",
           },
-          body: JSON.stringify({newNote})})  
+          body: JSON.stringify(newNote)})  
         .then((resp) => resp.json() )
         .then((note) => {
             onAddNote(note)
@@ -40,7 +42,7 @@ function NoteForm({onAddNote}) {
 
     return (
         <div>
-            <form className="form">
+            <form className="form" onSubmit={handleSubmit}>
                 <input 
                     className="title" 
                     type="text" 
@@ -60,7 +62,6 @@ function NoteForm({onAddNote}) {
                 <button 
                     className="submit" 
                     type="submit"
-                    onSubmit={handleSubmit}
                 >
                     Submit
                 </button>

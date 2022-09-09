@@ -1,16 +1,22 @@
 {
-    "notes": [
-        {
-            "id": 1, 
-            "title": "1st Note", 
-            "content": "Note Content",
-            "favorite": true
-        },
-        {
-            "id": 2, 
-            "title": "2nd Note", 
-            "content": "More Note Content",
-            "favorite": false
-        }
-    ]
+  "notes": [
+    {
+      "title": "1st Note",
+      "content": "Note Content",
+      "favorite": true,
+      "id": 1
+    },
+    {
+      "title": "2nd Note",
+      "content": "More Note Content",
+      "favorite": false,
+      "id": 2
+    },
+    {
+      "title": "Test",
+      "content": "New note",
+      "favorite": false,
+      "id": 3
+    }
+  ]
 }
