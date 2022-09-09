@@ -7,7 +7,6 @@ function Note({note, title, content, id, favorite, onHandleLike}) {
 //when favorite is on, make heart pink
 
     function handleLikeClick () {
-        // const updatedNote = {...note, favorite: false,}
 
         console.log("favorite", favorite)
 
@@ -23,7 +22,6 @@ function Note({note, title, content, id, favorite, onHandleLike}) {
             .then((resp)=> resp.json())
             .then((updatedNote) => {
                 onHandleLike(updatedNote)
-                console.log("updatedNote", updatedNote)
                 })
     }
 

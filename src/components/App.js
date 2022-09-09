@@ -22,7 +22,6 @@ function App() {
     const updatedNotes = notes.map((note) => note.id === updatedNote.id ? updatedNote : note)
 
     setNotes(updatedNotes)
-    console.log("updated notes", updatedNotes)
   }
 
   function addNote(note) {
