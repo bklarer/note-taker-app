@@ -9,15 +9,12 @@ function NoteForm({onAddNote}) {
         favorite: false
     })
 
-    //need to connect state and do a fetch post
 
     function handleChange(e) { 
         const {name, value} = e.target;
         setNewNote((newNote) => ({...newNote, [name]: value}))
 
     }
-
-    console.log("New Note", newNote)
 
     function handleSubmit(e) {
         e.preventDefault()

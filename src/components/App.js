@@ -17,6 +17,14 @@ function App() {
     setSearch(e.target.value)
   }
 
+  function handleLike(updatedNote) {
+  
+    const updatedNotes = notes.map((note) => note.id === updatedNote.id ? updatedNote : note)
+
+    setNotes(updatedNotes)
+    console.log("updated notes", updatedNotes)
+  }
+
   function addNote(note) {
     setNotes(notes => [...notes, note])}
 
@@ -27,12 +35,12 @@ function App() {
       .then((notes) => setNotes(notes))
   }, [])
   
-  console.log("notes", notes)
+
 
   const displayedNotes = notes.filter(note => 
     note.title.toLowerCase().includes(search.toLowerCase()) || note.content.toLowerCase().includes(search.toLowerCase()))
 
-  console.log("displayed Notes", displayedNotes)
+
 
   return (
     <div className="App">
@@ -44,7 +52,7 @@ function App() {
         </Route>
         <Route exact path="/notes">
           <Search search={search} onHandleSearch={handleSearch}/>
-          <NoteContainer displayedNotes={displayedNotes}/>
+          <NoteContainer displayedNotes={displayedNotes} onHandleLike={handleLike}/>
         <Route exact path="/notes/:id">
           <Note/>
         </Route>
