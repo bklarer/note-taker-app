@@ -2,13 +2,13 @@ import {useState}  from 'react'
 
 
 
-function NoteForm() {
+function NoteForm({onAddNote}) {
     const [newNote, setNewNote] = useState({
         title: "",
         content:"",
         favorite: false
     })
-    
+
     //need to connect state and do a fetch post
 
     function handleChange(e) { 
@@ -17,7 +17,26 @@ function NoteForm() {
 
     }
 
-    console.log(newNote)
+    function handleSubmit(e) {
+        e.preventDefault()
+        fetch("http://localhost:3004/notes", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({newNote})})  
+        .then((resp) => resp.json() )
+        .then((note) => {
+            onAddNote(note)
+            setNewNote({
+                title: "",
+                content:"",
+                favorite: false
+            })
+        
+        })
+        }
 
     return (
         <div>
@@ -41,6 +60,7 @@ function NoteForm() {
                 <button 
                     className="submit" 
                     type="submit"
+                    onSubmit={handleSubmit}
                 >
                     Submit
                 </button>

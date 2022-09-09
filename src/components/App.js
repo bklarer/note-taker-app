@@ -17,6 +17,9 @@ function App() {
     setSearch(e.target.value)
   }
 
+  function addNote(note) {
+    setNotes(notes => [...notes, note])}
+
 
   useEffect(() => {
     fetch("http://localhost:3004/notes")
@@ -37,7 +40,7 @@ function App() {
       <Navbar/>
       <Switch/>
         <Route exact path="/new">
-          <NoteForm />
+          <NoteForm  onAddNote={addNote}/>
         </Route>
         <Route exact path="/notes">
           <Search search={search} onHandleSearch={handleSearch}/>
