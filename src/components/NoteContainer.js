@@ -1,7 +1,7 @@
 import Note from './Note'
 
 
-function NoteContainer ({displayedNotes, onHandleLike}) {
+function NoteContainer ({displayedNotes, onHandleLike, onHandleDelete}) {
 
 //need to figure out how to make notes left to right 3 columns
     return(
@@ -16,6 +16,7 @@ function NoteContainer ({displayedNotes, onHandleLike}) {
             content={note.content}
             favorite={note.favorite}
             onHandleLike={onHandleLike}
+            onHandleDelete={onHandleDelete}
             />
             )})}
         </div>

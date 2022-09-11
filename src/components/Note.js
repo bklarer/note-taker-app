@@ -2,13 +2,11 @@
 
 
 
-function Note({note, title, content, id, favorite, onHandleLike}) {
+function Note({note, title, content, id, favorite, onHandleLike, onHandleDelete}) {
 
 //when favorite is on, make heart pink
 
     function handleLikeClick () {
-
-        console.log("favorite", favorite)
 
         fetch(`http://localhost:3004/notes/${id}`, {
             method: 'PATCH',
@@ -25,6 +23,23 @@ function Note({note, title, content, id, favorite, onHandleLike}) {
                 })
     }
 
+    function handleDeleteClick() {
+        fetch(`http://localhost:3004/notes/${id}`, {
+            method: 'DELETE',
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                }
+            }
+        )
+            .then((resp)=> {
+                resp.json()
+                onHandleDelete(id)
+
+            })
+
+    }
+
 
     return (
         <div>
@@ -36,7 +51,7 @@ function Note({note, title, content, id, favorite, onHandleLike}) {
                 
                 <button>✎</button> {/*Need to figure out route when clicking edit through link and then patch*/}
                 <button onClick={() => handleLikeClick()}>♡</button>
-                <button >X</button> {/*Need to figure delete note with fetch and state*/}
+                <button onClick={() => handleDeleteClick()} >X</button> {/*Need to figure delete note with fetch and state*/}
             </div>
         </div>
     )

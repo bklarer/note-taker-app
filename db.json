@@ -11,12 +11,6 @@
       "content": "More Note Content",
       "favorite": false,
       "id": 2
-    },
-    {
-      "title": "Test",
-      "content": "New note",
-      "favorite": false,
-      "id": 3
     }
   ]
 }

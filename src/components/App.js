@@ -24,6 +24,11 @@ function App() {
     setNotes(updatedNotes)
   }
 
+  function handleDelete(id) {
+    const updatedNotes = notes.filter((note) => note.id !== id)
+    setNotes(updatedNotes)
+  }
+
   function addNote(note) {
     setNotes(notes => [...notes, note])}
 
@@ -50,8 +55,8 @@ function App() {
           <NoteForm  onAddNote={addNote}/>
         </Route>
         <Route exact path="/notes">
-          <Search search={search} onHandleSearch={handleSearch}/>
-          <NoteContainer displayedNotes={displayedNotes} onHandleLike={handleLike}/>
+          <Search search={search} onHandleSearch={handleSearch} />
+          <NoteContainer displayedNotes={displayedNotes} onHandleLike={handleLike} onHandleDelete={handleDelete}/>
         <Route exact path="/notes/:id">
           <Note/>
         </Route>
