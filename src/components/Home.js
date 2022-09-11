@@ -9,8 +9,9 @@ function Home ({displayedNotes}) {
 
     return (
         <div>
+            <h2>Favorites</h2>
             {favoriteNotes.map(note => {
-                return (<Note title={note.title} content={note.content} key={note.id} id={note.id}/>)
+                return (<Note title={note.title} content={note.content} key={note.id} id={note.id} favorite={note.favorite}/>)
             })}
         </div>
     )

@@ -22,8 +22,9 @@
 
 }
 
-#note-container {
+.note-container {
   float: left;
+  width: 33%
 }
 
 button {
@@ -64,6 +65,19 @@ button {
   border-top: #282c34;
 }
 
+.edit-btn {
+  color: yellow;
+}
+
+.heart-btn {
+  color: pink;
+}
+
+.delete-btn {
+  color: red;
+}
+
+
 button {
   background: none;
   border: none;
@@ -71,3 +85,4 @@ button {
   font-size: large;
 
 }
+

@@ -40,6 +40,7 @@ function Note({note, title, content, id, favorite, onHandleLike, onHandleDelete}
 
     }
 
+    const heart = favorite === true ? "♥" : "♡";
 
     return (
         <div>
@@ -49,9 +50,9 @@ function Note({note, title, content, id, favorite, onHandleLike, onHandleDelete}
             </div>            
             <div className="button-container">
                 
-                <button>✎</button> {/*Need to figure out route when clicking edit through link and then patch*/}
-                <button onClick={() => handleLikeClick()}>♡</button>
-                <button onClick={() => handleDeleteClick()} >X</button> {/*Need to figure delete note with fetch and state*/}
+                <button className="edit-btn">✎</button> {/*Need to figure out route when clicking edit through link and then patch*/}
+                <button onClick={() => handleLikeClick()} className="heart-btn">{heart}</button>
+                <button onClick={() => handleDeleteClick()} className="delete-btn" >X</button> {/*Need to figure delete note with fetch and state*/}
             </div>
         </div>
     )
