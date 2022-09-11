@@ -22,10 +22,6 @@
 
 }
 
-.note-container {
-  float: left;
-  width: 33%
-}
 
 button {
   padding: 10px;
@@ -41,14 +37,13 @@ button {
 }
 
 .title {
-  background: yellow;
   border:none;
   padding: 1rem;
   font-size: larger;
 }
 
 .note {
-  background: yellow;
+  color: black;
   border:none;
   padding: 1rem;
   font-size: large;
@@ -57,7 +52,7 @@ button {
 }
 
 .submit {
-  background: rgb(255, 255, 0);
+  background: white;
   border:none;
   padding: 1rem;
   font-size: larger;
@@ -66,7 +61,7 @@ button {
 }
 
 .edit-btn {
-  color: yellow;
+  color: black;
 }
 
 .heart-btn {
@@ -86,3 +81,10 @@ button {
 
 }
 
+.search {
+  padding: 40px;
+}
+
+.notes {
+  max-width: 100%;
+}

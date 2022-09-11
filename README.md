@@ -2,7 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Intall react-router-dom@5 using npm install using `npm install react-router-dom@5`
+## Intall react router dom v5 using npm install using `npm install react-router-dom@5`
+
+## Intall React Bootstrap using npm install using `npm install react-bootstrap bootstrap`
 
 ## Available Scripts
 

@@ -1,5 +1,4 @@
-
-
+import {Col, Card} from "react-bootstrap"
 
 
 function Note({note, title, content, id, favorite, onHandleLike, onHandleDelete}) {
@@ -43,18 +42,20 @@ function Note({note, title, content, id, favorite, onHandleLike, onHandleDelete}
     const heart = favorite === true ? "♥" : "♡";
 
     return (
-        <div>
-            <div className="note-content">
-                <h3>{title}</h3>
-                <p>{content}</p>
-            </div>            
-            <div className="button-container">
-                
-                <button className="edit-btn">✎</button> {/*Need to figure out route when clicking edit through link and then patch*/}
-                <button onClick={() => handleLikeClick()} className="heart-btn">{heart}</button>
-                <button onClick={() => handleDeleteClick()} className="delete-btn" >X</button> {/*Need to figure delete note with fetch and state*/}
-            </div>
-        </div>
+        <Col sm={3}>
+            <Card>
+                <div className="note-content note">
+                    <h3 className="card-title">{title}</h3>
+                    <p className="card-body">{content}</p>
+                </div>            
+                <div className="card-body">
+                    
+                    <button className="edit-btn">✎</button> {/*Need to figure out route when clicking edit through link and then patch*/}
+                    <button onClick={() => handleLikeClick()} className="heart-btn">{heart}</button>
+                    <button onClick={() => handleDeleteClick()} className="delete-btn" >X</button> {/*Need to figure delete note with fetch and state*/}
+                </div>
+            </Card>
+        </Col>
     )
 }
 

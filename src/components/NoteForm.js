@@ -1,7 +1,6 @@
 import {useState}  from 'react'
 
 
-
 function NoteForm({onAddNote}) {
     const [newNote, setNewNote] = useState({
         title: "",

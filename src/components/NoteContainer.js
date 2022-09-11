@@ -1,3 +1,4 @@
+import {Container, Row} from "react-bootstrap"
 import Note from './Note'
 
 
@@ -5,7 +6,8 @@ function NoteContainer ({displayedNotes, onHandleLike, onHandleDelete}) {
 
 //need to figure out how to make notes left to right 3 columns
     return(
-        <div id="note-container">
+        <Container>
+            <Row >
             {displayedNotes.map((note) => {
             return (
             <Note
@@ -19,7 +21,8 @@ function NoteContainer ({displayedNotes, onHandleLike, onHandleDelete}) {
             onHandleDelete={onHandleDelete}
             />
             )})}
-        </div>
+            </Row>
+        </Container> 
 
 
     )
