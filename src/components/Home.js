@@ -11,6 +11,7 @@ function Home ({displayedNotes}) {
 
     return (
             <Container>
+                <h2>Favorites</h2>
                 <Row>
                     {favoriteNotes.map(note => {
                     return (<Note title={note.title} content={note.content} key={note.id} id={note.id} favorite={note.favorite}/>)

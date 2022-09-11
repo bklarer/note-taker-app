@@ -12,11 +12,12 @@
 
 .Navbar {
   padding: 10px;
-  color: lightblue;
+  width: 100%;
+
 }
 
 .NavLink {
-  color: yellow;
+  color: white;
   padding: 10px;
   text-decoration: none;
 

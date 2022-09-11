@@ -43,7 +43,7 @@ function Note({note, title, content, id, favorite, onHandleLike, onHandleDelete}
 
     return (
         <Col sm={3}>
-            <Card>
+            <Card className="mt-4">
                 <div className="note-content note">
                     <h3 className="card-title">{title}</h3>
                     <p className="card-body">{content}</p>
