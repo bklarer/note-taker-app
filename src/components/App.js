@@ -32,6 +32,17 @@ function App() {
   function addNote(note) {
     setNotes(notes => [...notes, note])}
 
+  function updateNote (updatedNote) {
+      const updatedNotes = notes.map((originalNote) => {
+        if (originalNote.id === updatedNote.id) {
+          return updatedNote;
+        } else {
+          return originalNote;
+        }
+      });
+      setNotes(updatedNotes);
+    };
+
 
   useEffect(() => {
     fetch("http://localhost:3004/notes")
@@ -44,7 +55,7 @@ function App() {
   const displayedNotes = notes.filter(note => 
     note.title.toLowerCase().includes(search.toLowerCase()) || note.content.toLowerCase().includes(search.toLowerCase()))
 
-
+  console.log("updated Notes", notes)
 
   return (
     <div className="App">
@@ -59,7 +70,7 @@ function App() {
           <NoteContainer displayedNotes={displayedNotes} onHandleLike={handleLike} onHandleDelete={handleDelete}/>
         </Route>
         <Route exact path="/notes/:id/edit">
-          <EditNote  onAddNote={addNote}/>
+          <EditNote onUpdateNote={updateNote}/>
         </Route>
         <Route exact path="/">
           <Home displayedNotes={displayedNotes}/>

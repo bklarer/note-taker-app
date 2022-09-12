@@ -1,8 +1,8 @@
 import {useState, useEffect}  from 'react'
-import {useParams} from 'react-router-dom'
+import {useParams, useHistory} from 'react-router-dom'
 
 
-function EditNote({onAddNote}) {
+function EditNote({onUpdateNote}) {
     const [newNote, setNewNote] = useState({
         title: "",
         content:"",
@@ -10,9 +10,7 @@ function EditNote({onAddNote}) {
     })
 
     const {id} = useParams();
-
-    console.log(newNote)
-    console.log(id)
+    const history = useHistory()
 
     function handleChange(e) { 
         const {name, value} = e.target;
@@ -35,11 +33,20 @@ function EditNote({onAddNote}) {
             Accept: "application/json",
           },
           body: JSON.stringify(newNote)})  
-        .then((resp) => resp.json() )
-        .then((note) => {
-            onAddNote(note)
-        })}
+        }
 
+    fetch(`http://localhost:3004/notes/${id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          }})
+          .then((resp) => resp.json())
+        .then((updatedNote) => {
+            onUpdateNote(updatedNote);
+            history.push(`/notes/${id}`)
+        })
+        
     return (
         <div>
             <form className="form" onSubmit={handleSubmit}>
