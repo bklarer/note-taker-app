@@ -26,7 +26,7 @@ function Navbar() {
                 Notes
             </NavLink>
             <NavLink
-                to="/new"
+                to="/notes/new"
                 exact
                 className="NavLink"
                 activeStyle={{

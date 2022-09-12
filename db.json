@@ -15,7 +15,7 @@
     {
       "title": "3rd Note",
       "content": "Test 123",
-      "favorite": false,
+      "favorite": true,
       "id": 3
     },
     {
@@ -23,12 +23,6 @@
       "content": "Yay!",
       "favorite": false,
       "id": 4
-    },
-    {
-      "title": "5th Note",
-      "content": "Note 5",
-      "favorite": false,
-      "id": 5
     }
   ]
 }

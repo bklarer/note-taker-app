@@ -1,4 +1,5 @@
 import {Col, Card} from "react-bootstrap"
+import {Link} from "react-router-dom"
 
 
 function Note({note, title, content, id, favorite, onHandleLike, onHandleDelete}) {
@@ -50,7 +51,7 @@ function Note({note, title, content, id, favorite, onHandleLike, onHandleDelete}
                 </div>            
                 <div className="card-body">
                     
-                    <button className="edit-btn">✎</button> {/*Need to figure out route when clicking edit through link and then patch*/}
+                    <Link to={`/notes/${id}/edit`}>✎</Link> {/*Need to figure out route when clicking edit through link and then patch, use link*/}
                     <button onClick={() => handleLikeClick()} className="heart-btn">{heart}</button>
                     <button onClick={() => handleDeleteClick()} className="delete-btn" >X</button> {/*Need to figure delete note with fetch and state*/}
                 </div>

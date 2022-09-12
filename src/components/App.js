@@ -7,6 +7,7 @@ import NoteContainer from './NoteContainer';
 import Home from './Home';
 import NoteForm from './NoteForm';
 import Note from './Note';
+import EditNote from './EditNote';
 
 function App() {
   
@@ -51,14 +52,14 @@ function App() {
       
       <Navbar/>
       <Switch/>
-        <Route exact path="/new">
+        <Route exact path="/notes/new">
           <NoteForm  onAddNote={addNote}/>
         </Route>
         <Route exact path="/notes">
           <Search search={search} onHandleSearch={handleSearch} />
           <NoteContainer displayedNotes={displayedNotes} onHandleLike={handleLike} onHandleDelete={handleDelete}/>
-        <Route exact path="/notes/:id">
-          <Note/>
+        <Route exact path="/notes/:id/edit">
+          <EditNote onAddNote={addNote}/>
         </Route>
         </Route>
         <Route exact path="/">
