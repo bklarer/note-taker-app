@@ -23,7 +23,7 @@ function Navbar() {
                 textDecoration: "underline"
                 }}
             >
-                Notes
+                All Notes
             </NavLink>
             <NavLink
                 to="/notes/new"

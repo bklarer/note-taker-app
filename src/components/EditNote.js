@@ -33,7 +33,7 @@ function EditNote({onUpdateNote}) {
             Accept: "application/json",
           },
           body: JSON.stringify(newNote)})  
-        }
+        
 
     fetch(`http://localhost:3004/notes/${id}`, {
         method: "PATCH",
@@ -44,9 +44,9 @@ function EditNote({onUpdateNote}) {
           .then((resp) => resp.json())
         .then((updatedNote) => {
             onUpdateNote(updatedNote);
-            history.push(`/notes/${id}`)
-        })
-        
+            history.push(`/notes`)
+        })}
+
     return (
         <div>
             <form className="form" onSubmit={handleSubmit}>

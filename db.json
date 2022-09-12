@@ -2,13 +2,13 @@
   "notes": [
     {
       "title": "1st Note",
-      "content": "Note Content",
+      "content": "Note Content Test 1 update",
       "favorite": true,
       "id": 1
     },
     {
       "title": "2nd Note",
-      "content": "More Note Content",
+      "content": "More Note Content update 2",
       "favorite": true,
       "id": 2
     },
