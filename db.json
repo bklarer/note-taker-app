@@ -2,27 +2,33 @@
   "notes": [
     {
       "title": "1st Note",
-      "content": "Note Content Test 1 update",
+      "content": "This is the first note.",
       "favorite": true,
       "id": 1
     },
     {
       "title": "2nd Note",
-      "content": "More Note Content update 2",
+      "content": "\nThis is the second note.",
       "favorite": true,
       "id": 2
     },
     {
       "title": "3rd Note",
-      "content": "Test 123",
+      "content": "This is the third note.",
       "favorite": true,
       "id": 3
     },
     {
       "title": "4th Note",
-      "content": "Yay!",
-      "favorite": false,
+      "content": "This is the forth note.",
+      "favorite": true,
       "id": 4
+    },
+    {
+      "title": "More Notes",
+      "content": "React is amazing",
+      "favorite": false,
+      "id": 5
     }
   ]
 }
