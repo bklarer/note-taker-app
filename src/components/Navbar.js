@@ -34,7 +34,7 @@ function Navbar() {
                 }}
             >
                 New Note
-            </NavLink>          
+            </NavLink>      
         </div>
     )
 

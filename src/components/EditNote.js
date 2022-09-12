@@ -63,7 +63,7 @@ function EditNote({onAddNote}) {
                     className="submit" 
                     type="submit"
                 >
-                    Submit
+                    Update
                 </button>
             </form>
         </div>
@@ -71,4 +71,4 @@ function EditNote({onAddNote}) {
 }
 
 
-export default EditNote
+export default EditNote;
