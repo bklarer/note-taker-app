@@ -46,6 +46,8 @@ function Home({ displayedNotes, onHandleLike, onHandleDelete }) {
                 key={note.id}
                 id={note.id}
                 favorite={note.favorite}
+                onHandleLike={onHandleLike}
+                onHandleDelete={onHandleDelete}
               />
             );
           })}
