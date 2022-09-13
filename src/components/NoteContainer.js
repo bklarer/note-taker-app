@@ -1,32 +1,27 @@
-import {Container, Row} from "react-bootstrap"
-import Note from './Note'
+import { Container, Row } from "react-bootstrap";
+import Note from "./Note";
 
-
-function NoteContainer ({displayedNotes, onHandleLike, onHandleDelete}) {
-
-//need to figure out how to make notes left to right 3 columns
-    return(
-        <Container>
-            <Row >
-            {displayedNotes.map((note) => {
-            return (
+function NoteContainer({ displayedNotes, onHandleLike, onHandleDelete }) {
+  return (
+    <Container>
+      <Row>
+        {displayedNotes.map((note) => {
+          return (
             <Note
-            key={note.id}
-            note={note}
-            id={note.id}
-            title={note.title}
-            content={note.content}
-            favorite={note.favorite}
-            onHandleLike={onHandleLike}
-            onHandleDelete={onHandleDelete}
+              key={note.id}
+              note={note}
+              id={note.id}
+              title={note.title}
+              content={note.content}
+              favorite={note.favorite}
+              onHandleLike={onHandleLike}
+              onHandleDelete={onHandleDelete}
             />
-            )})}
-            </Row>
-        </Container> 
-
-
-    )
+          );
+        })}
+      </Row>
+    </Container>
+  );
 }
-
 
 export default NoteContainer;

@@ -29,6 +29,12 @@
       "content": "React is amazing",
       "favorite": false,
       "id": 5
+    },
+    {
+      "title": "New Note",
+      "content": "New Note",
+      "favorite": false,
+      "id": 6
     }
   ]
 }
