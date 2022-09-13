@@ -26,9 +26,15 @@
     },
     {
       "title": "5th Note",
-      "content": "Yes!",
+      "content": "Yes! Update.",
       "favorite": true,
       "id": 5
+    },
+    {
+      "title": "New Note!",
+      "content": "Yay!",
+      "favorite": false,
+      "id": 6
     }
   ]
 }

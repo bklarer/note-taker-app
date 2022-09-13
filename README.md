@@ -1,3 +1,7 @@
+# Notetaker App
+## About the Project
+This project was designed to take advantage of the different abilities of React and create simple notes that can be favorited, edited, and deleted.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -22,11 +26,6 @@ You may also see any lint errors in the console.
 
 Runs the server on port 3004.\
 Open [http://localhost:3004](http://localhost:3004) to view it in your browser.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
