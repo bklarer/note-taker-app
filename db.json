@@ -8,21 +8,15 @@
     },
     {
       "title": "2nd Note",
-      "content": "This is the second note.",
-      "favorite": true,
+      "content": "Next Note.",
+      "favorite": false,
       "id": 2
     },
     {
       "title": "3rd Note",
-      "content": "This is the third note.",
-      "favorite": true,
+      "content": "More Notes! Update. Update again\n",
+      "favorite": false,
       "id": 3
-    },
-    {
-      "title": "4th Note",
-      "content": "This is the forth note.",
-      "favorite": true,
-      "id": 4
     }
   ]
 }

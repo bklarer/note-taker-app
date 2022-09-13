@@ -34,7 +34,6 @@ function EditNote({ onUpdateNote }) {
     });
 
     fetch(`http://localhost:3004/notes/${id}`, {
-      method: "PATCH",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
