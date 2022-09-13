@@ -75,7 +75,11 @@ function App() {
           <EditNote onUpdateNote={updateNote} />
         </Route>
         <Route exact path="/">
-          <Home displayedNotes={displayedNotes} />
+          <Home
+            displayedNotes={displayedNotes}
+            onHandleLike={handleLike}
+            onHandleDelete={handleDelete}
+          />
         </Route>
       </Switch>
     </div>

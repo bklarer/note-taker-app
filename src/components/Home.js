@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import Note from "./Note";
 
-function Home({ displayedNotes }) {
+function Home({ displayedNotes, onHandleLike, onHandleDelete }) {
   const [recentNotes, setRecentNotes] = useState([]);
 
   const favoriteNotes = displayedNotes.filter((note) => note.favorite === true);
@@ -28,6 +28,8 @@ function Home({ displayedNotes }) {
                 key={note.id}
                 id={note.id}
                 favorite={note.favorite}
+                onHandleLike={onHandleLike}
+                onHandleDelete={onHandleDelete}
               />
             );
           })}
