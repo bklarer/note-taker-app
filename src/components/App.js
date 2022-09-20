@@ -7,6 +7,7 @@ import NoteContainer from "./NoteContainer";
 import Home from "./Home";
 import NoteForm from "./NoteForm";
 import EditNote from "./EditNote";
+import ClickMe from "./ClickMe";
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -79,6 +80,7 @@ function App() {
             displayedNotes={displayedNotes}
             onHandleLike={handleLike}
             onHandleDelete={handleDelete}
+            notes={notes}
           />
         </Route>
       </Switch>
